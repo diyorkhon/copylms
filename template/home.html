@@ -7,10 +7,15 @@
 <body>
 {% extends 'base.html' %}
 {% block content %}
-<img src="img/1.png" alt="shunchaki rasm" width="300">
-<p>kuk rasm </p>
-<p>tuit logosi</p>
-<p><h2>AL-XORAZMIY NOMIDAGI TOSHKENT AXBOROT TEXNALOGIYALARI UNIVERSITETI</h2></p>
+    <img src="img/1.png" alt="shunchaki rasm" width="300">
+    <p>kuk rasm</p>
+    <p>tuit logosi salom</p>
+    <h2>AL-XORAZMIY NOMIDAGI TOSHKENT AXBOROT TEXNALOGIYALARI UNIVERSITETI</h2>
+<ul>
+    {% for post in object_list %}
+    <li><h2>{{ post.title}}</h2></br>{{post.text}}</br> author:{{ post.author.username}}</br> </li>
+    {% endfor %}
+</ul>
 {% endblock content %}
 </body>
 </html>
